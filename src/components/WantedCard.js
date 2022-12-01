@@ -4,7 +4,7 @@ import React from 'react';
 // const WantedCard = ({ name, image, category, _id }) => (
 const WantedCard = ({ name, image, category }) => (
   <div className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-    {/* <Link to={`/breads/${_id}`}> */}
+    {/* <Link to={`/wantedList/${_id}`}> */}
     <div className="card">
       <div className="card-header">
         <h4 className="card-header-title">{name}</h4>
