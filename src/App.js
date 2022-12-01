@@ -3,6 +3,7 @@ import Home from './components/Home';
 import WantedList from './components/WantedList';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import WantedIndex from './components/WantedIndex';
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/wantedList" element={<WantedList />} />
+        <Route path="/wantedList" element={<WantedIndex />} />
       </Routes>
       <Footer />
     </BrowserRouter>
