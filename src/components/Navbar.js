@@ -1,10 +1,15 @@
-function Navbar() {
-  return (
-    <>
-      <p>this is an update</p>
-      <p>this is a navbar placeholder</p>
-    </>
-  );
-}
+import { Link } from 'react-router-dom';
+
+const Navbar = () => (
+  <nav className="navbar is-dark">
+    <div className="container">
+      <div className="navbar-brand">
+        <Link to="/" className="navbar-item">
+          Home
+        </Link>
+      </div>
+    </div>
+  </nav>
+);
 
 export default Navbar;
