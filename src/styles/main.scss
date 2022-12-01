@@ -1,1 +1,9 @@
 @import '~bulma/bulma.sass'; // ! comment out this line if you DO NOT want to use Bulma
+
+.hero {
+  background-image: url('../assets/background-1.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
