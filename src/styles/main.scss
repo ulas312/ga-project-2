@@ -1,9 +1,19 @@
 @import '~bulma/bulma.sass'; // ! comment out this line if you DO NOT want to use Bulma
 
+* {
+  font-family: sans-serif, Arial, Helvetica;
+}
+
 .hero {
   background-image: url('../assets/background-1.jpeg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.footer {
+  height: 3em;
+  padding: 10px 0 0 0;
+  background-color: #000d1c;
 }
