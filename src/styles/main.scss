@@ -1,11 +1,12 @@
 @import '~bulma/bulma.sass'; // ! comment out this line if you DO NOT want to use Bulma
-
+@import 'variables';
 * {
   font-family: sans-serif, Arial, Helvetica;
 }
 
 .navbar {
   background-color: #000d1c;
+  height: $header-height;
 }
 
 .hero {
@@ -17,7 +18,15 @@
 }
 
 .footer {
-  height: 3em;
+  height: $footer-height;
   padding: 10px 0 0 0;
   background-color: #000d1c;
+  // position: fixed;
+  // bottom: 0;
+  // width: 100%;
+}
+
+.warning {
+  border: 1px solid red;
+  background-color: red;
 }

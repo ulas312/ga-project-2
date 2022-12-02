@@ -22,11 +22,9 @@ const WantedShow = () => {
     <>
       <div className="card">
         <div className="card-content">
-          <p className="title">Jeff Atwood </p>
-          <p className="subtitle">
-            “There are two hard things in computer science: cache invalidation,
-            naming things, and off-by-one errors.”
-          </p>
+          <p className="title">{wanted.title} </p>
+          <p className="subtitle">{wanted.title}</p>
+          <p className="warning">{wanted.warning_message}</p>
         </div>
       </div>
 
@@ -41,8 +39,8 @@ const WantedShow = () => {
           <div className="card-image ">
             <figure className="is-2by3">
               <img
-                src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM="
-                alt="Placeholder image"
+                src={wanted.images[0].original}
+                alt={wanted.images[0].caption}
               />
             </figure>
           </div>
@@ -50,25 +48,18 @@ const WantedShow = () => {
 
         <div className="card">
           <div className="card-content">
-            <p className="title">Jeff Atwood </p>
+            <p className="title">Reward: </p>
+            <p className="subtitle">{wanted.reward_text}</p>
+          </div>
+          <div className="card-content">
+            <p className="title">Details: </p>
             <p className="subtitle">
-              “There are two hard things in computer science: cache
-              invalidation, naming things, and off-by-one errors.”
+              {wanted.details} {wanted.caution}
             </p>
           </div>
           <div className="card-content">
-            <p className="title">Jeff Atwood </p>
-            <p className="subtitle">
-              “There are two hard things in computer science: cache
-              invalidation, naming things, and off-by-one errors.”
-            </p>
-          </div>
-          <div className="card-content">
-            <p className="title">Jeff Atwood </p>
-            <p className="subtitle">
-              “There are two hard things in computer science: cache
-              invalidation, naming things, and off-by-one errors.”
-            </p>
+            <p className="title">Other info: </p>
+            <p className="subtitle">{wanted.remarks}</p>
           </div>
         </div>
       </div>
