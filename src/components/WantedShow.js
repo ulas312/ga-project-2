@@ -60,6 +60,7 @@ const WantedShow = () => {
           <div className="card-content">
             <p className="title">Other info: </p>
             <p className="subtitle">{wanted.remarks}</p>
+            <p className="subtitle">{wanted.description}</p>
           </div>
         </div>
       </div>

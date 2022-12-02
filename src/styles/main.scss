@@ -15,15 +15,13 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  height: $body-height;
 }
 
 .footer {
   height: $footer-height;
   padding: 10px 0 0 0;
   background-color: #000d1c;
-  // position: fixed;
-  // bottom: 0;
-  // width: 100%;
 }
 
 .warning {

@@ -1,5 +1,5 @@
 const Home = () => (
-  <section className="hero is-fullheight-with-navbar ">
+  <section className="hero">
     <div className="hero-body">
       <div className="container">
         {/* <p className="title is-1 has-text-centered has-text-black">
