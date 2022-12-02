@@ -2,7 +2,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 
 // const WantedCard = ({ name, image, category, _id }) => (
-const WantedCard = ({ name, image, category }) => (
+const WantedCard = ({ name, image }) => (
   <div className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
     {/* <Link to={`/wantedList/${_id}`}> */}
     <div className="card">
@@ -14,11 +14,12 @@ const WantedCard = ({ name, image, category }) => (
           <img src={image} alt={name} loading="lazy" width="255" height="255" />
         </figure>
       </div>
-      <div className="card-content">
-        <h5 className="">{category}</h5>
-      </div>
     </div>
     {/* </Link> */}
   </div>
 );
 export default WantedCard;
+
+// <div className="card-content">
+//   <h5 className="">{category}</h5>
+// </div>;
