@@ -1,10 +1,9 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-// const WantedCard = ({ name, image, category, _id }) => (
-const WantedCard = ({ name, image }) => (
+const WantedCard = ({ name, image, _id }) => (
   <div className="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-    {/* <Link to={`/wantedList/${_id}`}> */}
+    <Link to={`/wantedList/${_id}`}>
     <div className="card">
       <div className="card-header">
         <h4 className="card-header-title">{name}</h4>
@@ -15,11 +14,7 @@ const WantedCard = ({ name, image }) => (
         </figure>
       </div>
     </div>
-    {/* </Link> */}
+    </Link>
   </div>
 );
 export default WantedCard;
-
-// <div className="card-content">
-//   <h5 className="">{category}</h5>
-// </div>;
