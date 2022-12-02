@@ -19,6 +19,8 @@ function WantedIndex() {
     return <p>Loading Most Wanted...</p>;
   }
 
+  console.log(suspects.items[0]);
+
   return (
     <section className="section">
       <div className="container">
@@ -26,7 +28,7 @@ function WantedIndex() {
           {suspects.items.map((suspect) => (
             <WantedCard
               key={suspect.title}
-              // key={suspect._id}
+              _id={suspect.uid}
               image={suspect.images[0].thumb}
               name={suspect.title}
             />
