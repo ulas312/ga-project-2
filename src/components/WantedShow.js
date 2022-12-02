@@ -20,8 +20,58 @@ const WantedShow = () => {
 
   return (
     <>
-      <p>wanted show is working</p>
-      <p>id is getting through {id}</p>
+      <div className="card">
+        <div className="card-content">
+          <p className="title">Jeff Atwood </p>
+          <p className="subtitle">
+            “There are two hard things in computer science: cache invalidation,
+            naming things, and off-by-one errors.”
+          </p>
+        </div>
+      </div>
+
+      {/* <div className="columns">
+        <div className="column is-three-quarters">is-three-quarters</div>
+        <div className="column">Auto</div>
+        <div className="column">Auto</div>
+      </div> */}
+
+      <div className="columns">
+        <div className="card column is-one-third">
+          <div className="card-image ">
+            <figure className="is-2by3">
+              <img
+                src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM="
+                alt="Placeholder image"
+              />
+            </figure>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="card-content">
+            <p className="title">Jeff Atwood </p>
+            <p className="subtitle">
+              “There are two hard things in computer science: cache
+              invalidation, naming things, and off-by-one errors.”
+            </p>
+          </div>
+          <div className="card-content">
+            <p className="title">Jeff Atwood </p>
+            <p className="subtitle">
+              “There are two hard things in computer science: cache
+              invalidation, naming things, and off-by-one errors.”
+            </p>
+          </div>
+          <div className="card-content">
+            <p className="title">Jeff Atwood </p>
+            <p className="subtitle">
+              “There are two hard things in computer science: cache
+              invalidation, naming things, and off-by-one errors.”
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
