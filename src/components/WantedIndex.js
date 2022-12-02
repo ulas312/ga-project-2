@@ -4,7 +4,7 @@ import { getAllSuspects } from '../lib/api';
 
 import WantedCard from '../components/WantedCard';
 
-// const BASE_URL = 'https://api.fbi.gov/wanted/v1/list';
+const BASE_URL = 'https://api.fbi.gov/wanted/v1/list';
 
 function WantedIndex() {
   const [suspects, setSuspects] = useState(null);
