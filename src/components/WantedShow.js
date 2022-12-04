@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getSingleSuspect } from '../lib/api';
-// import { cleanseData } from '..lib/api';
+import cleanseData from '../lib/htmlCleanser';
 
 const WantedShow = () => {
   const { id } = useParams();
@@ -17,7 +17,7 @@ const WantedShow = () => {
     return <p>Loading....</p>;
   }
 
-  console.log(wanted);
+  // console.log(wanted);
 
   return (
     <body>
@@ -52,42 +52,25 @@ const WantedShow = () => {
 
         <div className="card">
           <div className="card-content">
-            <p className="title">Reward: </p>
-            <p className="subtitle">{wanted.reward_text}</p>
+            {wanted.reward_text ? (
+              <>
+                <p className="title">Reward: </p>
+                <p className="subtitle">{wanted.reward_text}</p>
+              </>
+            ) : (
+              ''
+            )}
           </div>
           <div className="card-content">
             <p className="title">Details: </p>
             <p className="subtitle">
-              {wanted.details} {wanted.caution}
+              {cleanseData(wanted.details ? wanted.details : wanted.caution)}
             </p>
           </div>
           <div className="card-content">
             <p className="title">Other info: </p>
-            <p className="subtitle">{wanted.remarks}</p>
-            {/* ----- Blow ----- some suspects have multiple extra images.
-            If img's 2 returns empty breaks page */}
-            {/* <p className="subtitle">{wanted.description}</p> */}
-            {/* <figure className="is-2by3">
-              <img
-                src={wanted.images[1].thumb}
-                alt={wanted.images[1].caption}
-              />
-              &nbsp;
-              <img
-                src={wanted.images[2].thumb}
-                alt={wanted.images[2].caption}
-              />
-              &nbsp;
-              <img
-                src={wanted.images[3].thumb}
-                alt={wanted.images[3].caption}
-              />
-              &nbsp;
-              <img
-                src={wanted.images[4].thumb}
-                alt={wanted.images[4].caption}
-              />
-            </figure> */}
+            {wanted.remarks ? cleanseData(wanted.remarks) : ''}
+            <p>&nbsp;</p>
             <p className="subtitle">
               <span className="subtitle bold">Aliases:</span>&nbsp;{' '}
               {wanted.aliases}
@@ -157,17 +140,19 @@ const WantedShow = () => {
               </a>
               .
             </p>
-            <p className="subtitle bold">
-              Field Office: &nbsp;
-              <a
-                className="subtitle link"
-                href="https://www.fbi.gov/contact-us/field-offices"
-                // Is there a way to add {wanted.field_offices} to end of url
-                //href="https://www.fbi.gov/contact-us/field-offices/{wanted.field_offices}"
-              >
-                {wanted.field_offices}
-              </a>
-            </p>
+            {wanted.field_offices ? (
+              <p className="subtitle bold">
+                Field Office: &nbsp;
+                <a
+                  className="subtitle link"
+                  href="https://www.fbi.gov/contact-us/field-offices"
+                >
+                  {wanted.field_offices}
+                </a>
+              </p>
+            ) : (
+              ''
+            )}
             <a className="subtitle link" href="https://tips.fbi.gov/">
               Submit an anonymous Tip online
             </a>
