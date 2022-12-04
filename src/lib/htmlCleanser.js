@@ -8,8 +8,11 @@ function cleanseData(
     '<br />',
     '<br /',
     '<a>',
-    '</a>'
-    // '<a data-linktype="external" href='
+    '</a>',
+    '<a data-linktype="external" href="https://www.fbi.gov/wanted/counterintelligence/christopher-douglas-emms" data-urltype="/view" data-val="https://www.fbi.gov/wanted/counterintelligence/christopher-douglas-emms">',
+    '<a data-linktype="external" href="https://www.fbi.gov/wanted/cyber/mohsin-raza" data-urltype="/view" data-val="https://www.fbi.gov/wanted/cyber/mohsin-raza">',
+    '<a data-linktype="external" href="https://www.fbi.gov/wanted/kidnap/natasha-alex-carter" data-urltype="/view" data-val="https://www.fbi.gov/wanted/kidnap/natasha-alex-carter">',
+    '<a data-linktype="internal" href="https://www.fbi.gov/wanted/seeking-info/delmas-traversie-jr-" data-urltype="_direct_" data-val="b659218ef3554ffe960878620f184cb6">'
   ]
 ) {
   let cleansedString = string;
