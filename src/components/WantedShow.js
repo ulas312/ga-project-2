@@ -71,10 +71,15 @@ const WantedShow = () => {
             <p className="title">Other info: </p>
             {wanted.remarks ? cleanseData(wanted.remarks) : ''}
             <p>&nbsp;</p>
-            <p className="subtitle">
-              <span className="subtitle bold">Aliases:</span>&nbsp;{' '}
-              {wanted.aliases}
-            </p>
+
+            {wanted.aliases ? (
+              <p className="subtitle">
+                <span className="subtitle bold">Aliases:</span>&nbsp;{' '}
+                {wanted.aliases}
+              </p>
+            ) : (
+              ''
+            )}
           </div>
         </div>
       </div>
