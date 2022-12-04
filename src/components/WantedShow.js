@@ -113,14 +113,14 @@ const WantedShow = () => {
               If you have any information concerning this person, please contact
               your &nbsp;
               <a
-                className="subtitle"
+                className="subtitle link"
                 href="https://www.fbi.gov/contact-us/field-offices"
               >
                 local FBI office
               </a>
-              or the nearest &nbsp;
+              &nbsp; or the nearest &nbsp;
               <a
-                className="subtitle"
+                className="subtitle link"
                 href="https://www.fbi.gov/contact-us/international-offices"
               >
                 American Embassy or Consulate
@@ -130,10 +130,10 @@ const WantedShow = () => {
           </div>
           <div className="card-content">
             {/* <p className="subtitle">{wanted.field_offices}</p> */}
-            <p className="subtitle">
+            <p className="subtitle bold">
               Field Office: &nbsp;
               <a
-                className="subtitle"
+                className="subtitle link"
                 href="https://www.fbi.gov/contact-us/field-offices/{wanted.field_offices}"
               >
                 {wanted.field_offices}
@@ -141,9 +141,9 @@ const WantedShow = () => {
             </p>
           </div>
           <div className="card-content">
-            <p className="title">Other info: </p>
-            <p className="subtitle">{wanted.remarks}</p>
-            {/* <p className="subtitle">{wanted.description}</p> */}
+            <a className="subtitle link" href="https://tips.fbi.gov/">
+              Submit an anonymous Tip online
+            </a>
           </div>
         </div>
       </div>
