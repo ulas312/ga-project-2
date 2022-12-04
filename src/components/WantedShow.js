@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getSingleSuspect } from '../lib/api';
-// import { cleanseData } from '..lib/api';
+import cleanseData from '../lib/htmlCleanser';
 
 const WantedShow = () => {
   const { id } = useParams();
@@ -58,7 +58,7 @@ const WantedShow = () => {
           <div className="card-content">
             <p className="title">Details: </p>
             <p className="subtitle">
-              {wanted.details} {wanted.caution}
+              {cleanseData(wanted.details ? wanted.details : wanted.caution)}
             </p>
           </div>
           <div className="card-content">

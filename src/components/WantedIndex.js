@@ -1,25 +1,31 @@
 // import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { getAllSuspects } from '../lib/api';
+import { getSuspectsPage } from '../lib/api';
+import Pagination from '../components/Pagination';
 
 import WantedCard from '../components/WantedCard';
 
-const BASE_URL = 'https://api.fbi.gov/wanted/v1/list';
-
 function WantedIndex() {
   const [suspects, setSuspects] = useState(null);
+  const [pageRequired, setPageRequired] = useState(1);
+  const personsPerPage = 20;
+  // let noOfPages;
 
   useEffect(() => {
-    getAllSuspects()
-      .then((res) => setSuspects(res.data))
+    getSuspectsPage(pageRequired)
+      .then((res) => {
+        setSuspects(res.data);
+        // noOfPages = Math.ceil(suspects.total / personsPerPage);
+        // console.log(noOfPages);
+      })
       .catch((err) => console.error(err));
-  }, []);
+  }, [pageRequired]);
 
   if (suspects === null) {
     return <p>Loading Most Wanted...</p>;
   }
 
-  console.log(suspects.items[0]);
+  // console.log(suspects.items[0]);
 
   return (
     <section className="section">
@@ -34,6 +40,7 @@ function WantedIndex() {
             />
           ))}
         </div>
+        <Pagination />
       </div>
     </section>
   );

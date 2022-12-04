@@ -2,7 +2,7 @@
 
 function cleanseData(string, toFilter = ['<p>', '</p>', '<br />']) {
   let cleansedString = string;
-  for (tagElement of toFilter) {
+  for (const tagElement of toFilter) {
     let index = cleansedString.indexOf(tagElement);
     while (index != -1) {
       if (index == 0) {
