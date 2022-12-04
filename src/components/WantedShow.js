@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getSingleSuspect } from '../lib/api';
-import { cleanseData } from '..lib/api';
+// import { cleanseData } from '..lib/api';
 
 const WantedShow = () => {
   const { id } = useParams();
