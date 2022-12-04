@@ -1,19 +1,9 @@
 import React from 'react';
 
 function Pagination({ max, currentPage, pageNav }) {
-  // function Pagination({ preceedingPage, currentPage, nextPage, lastPage })
   const pageDown = currentPage - 1;
   const pageUp = currentPage + 1;
 
-  //  if (currentPage == 1) {
-  //   1 1 2 3
-  //  }
-  //  if 2 {
-  //   1 2 3 4
-  //  }
-  //  if 3 {
-  //   1 2 3 4
-  //  }
   function displayPreceeding() {
     return (
       <li>
@@ -113,30 +103,3 @@ function Pagination({ max, currentPage, pageNav }) {
 }
 
 export default Pagination;
-
-// function displayPrev() {
-//   <a
-//     onClick={() => {
-//       pageNav(currentPage - 1);
-//     }}
-//     className="pagination-previous"
-//   >
-//     Previous
-//   </a>;
-// }
-
-// function displayNext() {
-//   <a
-//     onClick={() => {
-//       pageNav(currentPage + 1);
-//     }}
-//     className="pagination-next"
-//   >
-//     Next page
-//   </a>;
-// }
-
-// return (
-//   <nav className="pagination" role="navigation" aria-label="pagination">
-//     <>{currentPage != 1 ? displayPrev() : ''}</>
-//     <>{currentPage != max ? displayNext() : ''}</>

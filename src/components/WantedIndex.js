@@ -6,7 +6,7 @@ import WantedCard from '../components/WantedCard';
 
 function WantedIndex() {
   const [suspects, setSuspects] = useState(null);
-  const [pageRequired, setPageRequired] = useState(30);
+  const [pageRequired, setPageRequired] = useState(1);
   const [noOfPages, setNoOfPages] = useState();
   const personsPerPage = 20;
 
