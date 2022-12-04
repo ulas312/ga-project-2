@@ -19,7 +19,7 @@ const WantedShow = () => {
   console.log(wanted);
 
   return (
-    <>
+    <body>
       <div className="card">
         <div className="card-content">
           <p className="title">{wanted.title} </p>
@@ -63,7 +63,34 @@ const WantedShow = () => {
           <div className="card-content">
             <p className="title">Other info: </p>
             <p className="subtitle">{wanted.remarks}</p>
+            {/* ----- Blow ----- some suspects have multiple extra images.
+            If img's 2 returns empty breaks page */}
             {/* <p className="subtitle">{wanted.description}</p> */}
+            {/* <figure className="is-2by3">
+              <img
+                src={wanted.images[1].thumb}
+                alt={wanted.images[1].caption}
+              />
+              &nbsp;
+              <img
+                src={wanted.images[2].thumb}
+                alt={wanted.images[2].caption}
+              />
+              &nbsp;
+              <img
+                src={wanted.images[3].thumb}
+                alt={wanted.images[3].caption}
+              />
+              &nbsp;
+              <img
+                src={wanted.images[4].thumb}
+                alt={wanted.images[4].caption}
+              />
+            </figure> */}
+            <p className="subtitle">
+              <span className="subtitle bold">Aliases:</span>&nbsp;{' '}
+              {wanted.aliases}
+            </p>
           </div>
         </div>
       </div>
@@ -108,6 +135,8 @@ const WantedShow = () => {
 
         <div className="card">
           <div className="card-content">
+            <p className="warning">{wanted.warning_message}</p>
+            <br />
             <p className="title">Submit a Tip:</p>
             <p className="subtitle">
               If you have any information concerning this person, please contact
@@ -127,64 +156,24 @@ const WantedShow = () => {
               </a>
               .
             </p>
-          </div>
-          <div className="card-content">
-            {/* <p className="subtitle">{wanted.field_offices}</p> */}
             <p className="subtitle bold">
               Field Office: &nbsp;
               <a
                 className="subtitle link"
-                href="https://www.fbi.gov/contact-us/field-offices/{wanted.field_offices}"
+                href="https://www.fbi.gov/contact-us/field-offices"
+                // Is there a way to add {wanted.field_offices} to end of url
+                //href="https://www.fbi.gov/contact-us/field-offices/{wanted.field_offices}"
               >
                 {wanted.field_offices}
               </a>
             </p>
-          </div>
-          <div className="card-content">
             <a className="subtitle link" href="https://tips.fbi.gov/">
               Submit an anonymous Tip online
             </a>
           </div>
         </div>
       </div>
-
-      {/* <div className="card column is-one-third">
-        <div className="card-content">
-          <table className="table is-striped">
-            <tbody>
-              <tr>
-                <td>Date(s) of Birth Used</td>
-                <td>{wanted.dates_of_birth_used}</td>
-              </tr>
-              <tr>
-                <td>Hair</td>
-                <td>{wanted.hair}</td>
-              </tr>
-              <tr>
-                <td>Eyes</td>
-                <td>{wanted.eyes_raw}</td>
-              </tr>
-              <tr>
-                <td>Height (inch)</td>
-                <td>{wanted.height_max}</td>
-              </tr>
-              <tr>
-                <td>Weight</td>
-                <td>{wanted.weight}</td>
-              </tr>
-              <tr>
-                <td>Sex</td>
-                <td>{wanted.sex}</td>
-              </tr>
-              <tr>
-                <td>Race</td>
-                <td>{wanted.race}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div> */}
-    </>
+    </body>
   );
 };
 

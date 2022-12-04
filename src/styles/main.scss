@@ -1,8 +1,14 @@
 @import '~bulma/bulma.sass'; // ! comment out this line if you DO NOT want to use Bulma
 @import 'variables';
 * {
-  font-family: sans-serif, Arial, Helvetica;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
+
+// body {
+//   font-size: 14px;
+//   line-height: 1.42857143;
+//   color: #333;
+// }
 
 .navbar {
   background-color: #000d1c;
@@ -42,7 +48,7 @@
 
 .link {
   color: #0000ee;
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 
 .bold {
