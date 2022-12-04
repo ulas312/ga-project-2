@@ -1,4 +1,3 @@
-// import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { getSuspectsPage } from '../lib/api';
 import Pagination from '../components/Pagination';
@@ -7,16 +6,19 @@ import WantedCard from '../components/WantedCard';
 
 function WantedIndex() {
   const [suspects, setSuspects] = useState(null);
-  const [pageRequired, setPageRequired] = useState(1);
+  const [pageRequired, setPageRequired] = useState(30);
+  const [noOfPages, setNoOfPages] = useState();
   const personsPerPage = 20;
-  // let noOfPages;
+
+  function nav(pageNo) {
+    setPageRequired(pageNo);
+  }
 
   useEffect(() => {
     getSuspectsPage(pageRequired)
       .then((res) => {
         setSuspects(res.data);
-        // noOfPages = Math.ceil(suspects.total / personsPerPage);
-        // console.log(noOfPages);
+        setNoOfPages(Math.ceil(res.data.total / personsPerPage));
       })
       .catch((err) => console.error(err));
   }, [pageRequired]);
@@ -24,8 +26,6 @@ function WantedIndex() {
   if (suspects === null) {
     return <p>Loading Most Wanted...</p>;
   }
-
-  // console.log(suspects.items[0]);
 
   return (
     <section className="section">
@@ -77,7 +77,7 @@ function WantedIndex() {
             />
           ))}
         </div>
-        <Pagination />
+        <Pagination max={noOfPages} currentPage={pageRequired} pageNav={nav} />
       </div>
     </section>
   );
