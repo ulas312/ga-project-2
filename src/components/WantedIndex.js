@@ -27,12 +27,8 @@ function WantedIndex() {
         )
       : suspects?.items;
 
-    console.log({ filteredSuspects });
     return filteredSuspects;
   }
-
-  console.log(categoryValue);
-  console.log(filterMostWanted());
 
   useEffect(() => {
     getSuspectsPage(pageRequired)
