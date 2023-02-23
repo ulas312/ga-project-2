@@ -278,7 +278,7 @@ export default cleanseData;
 
 ![FBI most wanted home page](https://i.postimg.cc/jSNkKLXh/Screenshot-2023-01-01-at-15-30-15.png)
 
-![FBI most wanted home page](https://postimg.cc/7bzXxWgL)
+![FBI most wanted home page](https://i.postimg.cc/jqg1hV2y/Screenshot-2023-01-01-at-15-28-54.png)
 
 ![FBI most wanted home page](https://i.postimg.cc/7YjQpgg6/Screenshot-2023-01-01-at-15-29-28.png)
 
